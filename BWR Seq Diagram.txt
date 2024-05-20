@@ -1,0 +1,33 @@
+title BUG WRANGLER RANCH
+
+participant main.js
+participant cattle.js
+participant drovers.js
+participant journey.js
+participant database.js
+participant utils.js
+
+cattle.js->database.js: import database variable
+cattle.js<--database.js: export database variable
+main.js->cattle.js: import roundup function
+main.js<--cattle.js: export roundup function
+box over main.js, cattle.js:roundup()
+note right of main.js: display cattle types
+
+
+drovers.js->database.js: import database variable
+drovers.js<--database.js: export database variable
+main.js->drovers.js: import hireDrovers function
+main.js<--drovers.js: export hireDrovers function
+box over main.js, drovers.js: hireDrovers()
+note right of main.js: display # of drovers and names
+
+journey.js->utils.js: import randomize function
+journey.js<--utils.js: export randomize function
+main.js->journey.js: import journey.js module functions
+main.js<--journey.js: export journey.js module functions
+box over main.js, journey.js: journeyMaker()
+note right of main.js: display terrain types
+
+
+bottomparticipants
