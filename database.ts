@@ -1,5 +1,6 @@
-const database = {
-    cattleTypes: [
+import { CattleType, Drover } from "./types"
+
+const cattleTypes: CattleType[] = [
         {
             id: 1,
             breed: "American Angus"
@@ -16,8 +17,10 @@ const database = {
             id: 4,
             breed: "Ankole-Watusi"
         }
-    ],
-    drovers: [{
+    ]
+
+const drovers: Drover[] = [
+    {
         "id": 1,
         "first_name": "Wanda",
         "last_name": "Ascraft",
@@ -267,9 +270,9 @@ const database = {
         "first_name": "Karlen",
         "last_name": "Cuel",
         "gender": "Female"
-    }]
-}
+    }
+]
 
+const database = { cattleTypes, drovers}
 
-
-module.exports = { database }
+export { database }
