@@ -1,11 +1,12 @@
-const { roundup } = require("./cattle.js")
-const { hireDrovers } = require("./drovers.js")
-const { journeyMaker } = require("./journey.js")
+import { roundup } from "./cattle.js"
+import { hireDrovers } from "./drovers.js"
+import { journeyMaker } from "./journey.js"
+import { Drover, TerrainType } from "./types"
 
-const cattleToDrive = 50
-const drovers = hireDrovers(cattleToDrive)
-const cattle = roundup(cattleToDrive)
-const journey = journeyMaker()
+const cattleToDrive: number = 50
+const drovers: Drover[] = hireDrovers(cattleToDrive)
+const cattle: string[] = roundup(cattleToDrive)
+const journey: TerrainType[] = journeyMaker()
 
 console.log(`
 ************************************************

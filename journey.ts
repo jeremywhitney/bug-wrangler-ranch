@@ -1,29 +1,30 @@
-const { randomize } = require("./utils.js")
+import { TerrainAreas, TerrainType } from "./types"
+import { randomize } from "./utils.js"
 
-const createRivers = () => {
+const createRivers = (): number => {
     const rivers = Math.floor(Math.random() * 3) + 1
     return rivers
 }
 
-const createMountains = () => {
+const createMountains = (): number => {
     const mountains = Math.floor(Math.random() * 2) + 1
     return mountains
 }
 
-const createForests = () => {
+const createForests = (): number => {
     const forests = Math.floor(Math.random() * 2) + 1
     return forests
 }
 
-const createPlains = () => {
+const createPlains = (): number => {
     const plains = Math.floor(Math.random() * 4) + 1
     return plains
 }
 
-const journeyMaker = () => {
-    const journey = []
+const journeyMaker = (): TerrainType[] => {
+    const journey: TerrainType[] = []
 
-    const areas = {
+    const areas: TerrainAreas = {
         rivers: createRivers(),
         forests: createForests(),
         mountains: createMountains(),
@@ -49,7 +50,10 @@ const journeyMaker = () => {
     return randomize(journey)
 }
 
-module.exports = {
-    createRivers, createForests,
-    createMountains, createPlains, journeyMaker
+export {
+    createRivers, 
+    createForests,
+    createMountains, 
+    createPlains, 
+    journeyMaker
 }

@@ -1,0 +1,12 @@
+{
+  "name": "cattle-drive",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
