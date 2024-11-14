@@ -1,9 +1,10 @@
-const { database } = require("./database.js")
+import { database } from "./database"
+import { Drover } from "./types"
 
-const hireDrovers = (herdSize) => {
-    const drovers = []
+const hireDrovers = (herdSize: number): Drover[] => {
+    const drovers: Drover[] = []
     const allDrovers = database.drovers
-    const numberNeeded = herdSize / 10
+    const numberNeeded = Math.floor(herdSize / 10)
 
     for (let counter = 0; counter < numberNeeded; counter++) {
         const randomHerderId = Math.floor(Math.random() * allDrovers.length)
@@ -12,4 +13,4 @@ const hireDrovers = (herdSize) => {
     return drovers
 }
 
-module.exports = { hireDrovers }
+export { hireDrovers }
