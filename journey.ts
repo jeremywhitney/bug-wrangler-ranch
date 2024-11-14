@@ -1,5 +1,5 @@
 import { TerrainAreas, TerrainType } from "./types"
-import { randomize } from "./utils"
+import { randomize } from "./utils.js"
 
 const createRivers = (): number => {
     const rivers = Math.floor(Math.random() * 3) + 1

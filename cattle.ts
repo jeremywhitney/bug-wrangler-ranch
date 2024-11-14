@@ -1,4 +1,4 @@
-import { database } from "./database"
+import { database } from "./database.js"
 
 const roundup = (herdSize: number): string[] => {
     const cattle: string[] = []
