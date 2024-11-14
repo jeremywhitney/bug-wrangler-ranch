@@ -1,5 +1,5 @@
-const randomize = (array) => {
-    return array.sort(() => Math.random() - 0.5)
+const randomize = <T>(array: T[]): T[] => {
+    return [...array].sort(() => Math.random() - 0.5)
 }
 
-module.exports = { randomize }
+export { randomize }
